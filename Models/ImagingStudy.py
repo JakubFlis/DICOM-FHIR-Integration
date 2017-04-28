@@ -18,6 +18,6 @@ class ImagingStudy:
         self.numberOfInstances = parameters[13]
         self.procedureReference = parameters[14]
         self.procedureCode = parameters[15]
-        self.reason == parameters[16]
+        self.reason = parameters[16]
         self.description = parameters[17]
         self.series = series
