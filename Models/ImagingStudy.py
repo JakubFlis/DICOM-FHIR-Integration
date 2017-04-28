@@ -1,7 +1,5 @@
 class ImagingStudy:
-
     def __init__(self, parameters, series):
-
         self.uid = parameters[0]
         self.accession = parameters[1]
         self.identifier = parameters[2]
