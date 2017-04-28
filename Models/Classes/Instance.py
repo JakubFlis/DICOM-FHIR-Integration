@@ -4,3 +4,4 @@ class Instance:
         self.number = parameters[1]
         self.sopClass = parameters[2]
         self.title = parameters[3]
+        
