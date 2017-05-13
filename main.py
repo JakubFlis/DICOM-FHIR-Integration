@@ -18,7 +18,7 @@ def main(argv):
          inputfile = arg
 
    if inputfile != '':
-       IntegrationEngine(inputfile).showDicomImage()
+       IntegrationEngine(inputfile)
    else:
        print 'Please specify input DICOM file by using -i <inputfile> flag.'
 

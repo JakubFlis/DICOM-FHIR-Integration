@@ -4,4 +4,8 @@ import dicom
 
 class IntegrationEngine():
     def __init__(self, dicomFilePath):
-        self.dicomFile = dicom.read_file(dicomFilePath)
+        try:
+            self.dicomFile = dicom.read_file(dicomFilePath)
+        except IOError:
+            print "There's no file under path", dicomFilePath
+        
