@@ -15,7 +15,7 @@ $ pip install pydicom
 
 ### Usage
 
-An empty file path with .dcm extension (DICOM file) must be provided using i- <inputfile> flag, for example:
+A file path with .dcm extension (DICOM file) must be provided using -i <inputfile> flag, for example:
 
 ```sh
 $ main.py -i SampleDICOM/USG.dcm
