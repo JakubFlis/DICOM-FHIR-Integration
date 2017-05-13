@@ -2,7 +2,7 @@
 
 import dicom
 
-class IntegrationEngine():
+class IntegrationEngine:
     def __init__(self, dicomFilePath):
         try:
             self.dicomFile = dicom.read_file(dicomFilePath)
