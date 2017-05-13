@@ -25,7 +25,7 @@ class ImagingStudy:
         self.numberOfInstances = parameters[IMAGINGSTUDY.NUMBEROFINSTANCES]
         self.procedureReference = parameters[IMAGINGSTUDY.PROCEDUREREFERENCE]
         self.procedureCode = parameters[IMAGINGSTUDY.PROCEDURECODE]
-        self.reason == parameters[IMAGINGSTUDY.REASON]
+        self.reason = parameters[IMAGINGSTUDY.REASON]
         self.description = parameters[IMAGINGSTUDY.DESCRIPTION]
 
 class IMAGINGSTUDY(object):
