@@ -12,13 +12,13 @@ study = Study(studyParameters, imagingStudy, series)
 
 
 class Study:
-	def __init__(self, parameters, imagingStudy, series):
-		self.uid = parameters[STUDY.UID]
-		self.imagingStudy = imagingStudy
-		self.endpoint = parameters[STUDY.ENDPOINT]
-		self.series = series
+    def __init__(self, parameters, imaging_study, series):
+        self.uid = parameters[STUDY.UID]
+        self.imagingStudy = imaging_study
+        self.endpoint = parameters[STUDY.ENDPOINT]
+        self.series = series
 
 
 class STUDY(object):
-	UID = 0
-	ENDPOINT = 2
+    UID = 0
+    ENDPOINT = 2

@@ -14,19 +14,19 @@ imagingManifest = ImagingManifest(imagingManifestParams,study)
 
 
 class ImagingManifest:
-	def __init__(self, parameters, study):
-		self.identifier = parameters[IMAGINGMANIFEST.IDENTIFIER]
-		self.patient = parameters[IMAGINGMANIFEST.PATIENT]
-		self.authoringTime = parameters[IMAGINGMANIFEST.AUTHORINGTIME]
-		self.author = parameters[IMAGINGMANIFEST.AUTHOR]
-		self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
-		self.study = study
+    def __init__(self, parameters, study):
+        self.identifier = parameters[IMAGINGMANIFEST.IDENTIFIER]
+        self.patient = parameters[IMAGINGMANIFEST.PATIENT]
+        self.authoringTime = parameters[IMAGINGMANIFEST.AUTHORINGTIME]
+        self.author = parameters[IMAGINGMANIFEST.AUTHOR]
+        self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
+        self.study = study
 
 
 class IMAGINGMANIFEST(object):
-	IDENTIFIER = 0
-	PATIENT = 1
-	AUTHORINGTIME = 2
-	AUTHOR = 3
-	DESCRIPTION = 4
-	STUDY = 5
+    IDENTIFIER = 0
+    PATIENT = 1
+    AUTHORINGTIME = 2
+    AUTHOR = 3
+    DESCRIPTION = 4
+    STUDY = 5
