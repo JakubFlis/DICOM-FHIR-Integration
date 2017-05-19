@@ -4,9 +4,11 @@ instanceParams = {INSTANCE.TITLE: 'some title', INSTANCE.UID: 'some uid'}
 instance = Instance(instanceParams)
 seriesParams = {SERIES.UID: 'some uid', SERIES.ENDPOINT: 'some endpoint'}
 series = Series(seriesParams, instance)
-imagingStudyParams = {IMAGINGMSTUDY.UID: 'some uid', IMAGINGSTUDY.PATIENT: 'some patient'}
+imagingStudyParams = {IMAGINGSTUDY.UID: 'some uid', IMAGINGSTUDY.PATIENT: 'some patient'}
 imagingStudy = ImagingStudy(imagingStudy, series)
 """
+
+
 class ImagingStudy:
     def __init__(self, parameters, series):
         self.uid = parameters[IMAGINGSTUDY.UID]
@@ -27,6 +29,8 @@ class ImagingStudy:
         self.procedureCode = parameters[IMAGINGSTUDY.PROCEDURECODE]
         self.reason = parameters[IMAGINGSTUDY.REASON]
         self.description = parameters[IMAGINGSTUDY.DESCRIPTION]
+        self.series = series
+
 
 class IMAGINGSTUDY(object):
     UID = 0

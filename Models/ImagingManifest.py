@@ -4,13 +4,15 @@ instanceParams = {INSTANCE.TITLE: 'some title', INSTANCE.UID: 'some uid'}
 instance = Instance(instanceParams)
 seriesParams = {SERIES.UID: 'some uid', SERIES.ENDPOINT: 'some endpoint'}
 series = Series(seriesParams, instance)
-imagingStudyParams = {IMAGINGMSTUDY.UID: 'some uid', IMAGINGSTUDY.PATIENT: 'some patient'}
+imagingStudyParams = {IMAGINGSTUDY.UID: 'some uid', IMAGINGSTUDY.PATIENT: 'some patient'}
 imagingStudy = ImagingStudy(imagingStudy, series)
 studyParameters = {STUDY.UID: 'some uid', STUDY.IMAGINGSTUDY: 'uid of imagingstudy', STUDY.ENDPOINT: 'some endpoint'}
 study = Study(studyParameters, imagingStudy, series)
 imagingManifestParams = {IMAGINGMANIFEST.IDENTIFIER: 'some identifier', IMAGINGMANIFEST.PATIENT: 'some patient'}
 imagingManifest = ImagingManifest(imagingManifestParams,study)
 """
+
+
 class ImagingManifest:
     def __init__(self, parameters, study):
         self.identifier = parameters[IMAGINGMANIFEST.IDENTIFIER]
@@ -19,6 +21,7 @@ class ImagingManifest:
         self.author = parameters[IMAGINGMANIFEST.AUTHOR]
         self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
         self.study = study
+
 
 class IMAGINGMANIFEST(object):
     IDENTIFIER = 0
