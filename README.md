@@ -1,22 +1,20 @@
 # DICOM integration with Kainos Evolve Velocity platform
 > A group project from Gdansk University of Technology
 
-### Installation
-This application requires [Python 2.7.*](https://www.python.org/download/releases/2.7/) to run.
+### Info
+This repository consists of three main folders:
 
-Dependencies:
-- [PyDicom](http://www.pydicom.org/)
+- Integration
+- Server
+- Webapp
 
-Dependencies can be installed via `pip` command, for example:
+### Integration
+Python project for processing DICOM files and for Velocity integration.
 
-```sh
-$ pip install pydicom
-```
+### Server 
 
-### Usage
+*TBC*
 
-A file path with .dcm extension (DICOM file) must be provided using -i <inputfile> flag, for example:
+### Webapp
 
-```sh
-$ main.py -i SampleDICOM/USG.dcm
-```
+*TBC*
