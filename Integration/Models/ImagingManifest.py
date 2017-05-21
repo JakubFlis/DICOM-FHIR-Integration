@@ -17,10 +17,12 @@ class ImagingManifest:
     def __init__(self, parameters, study):
         self.identifier = parameters[IMAGINGMANIFEST.IDENTIFIER]
         self.patient = parameters[IMAGINGMANIFEST.PATIENT]
-        self.authoringTime = parameters[IMAGINGMANIFEST.AUTHORINGTIME]
-        self.author = parameters[IMAGINGMANIFEST.AUTHOR]
-        self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
-        self.study = study
+
+        #Error out of index occures. To fix
+        #self.authoringTime = parameters[IMAGINGMANIFEST.AUTHORINGTIME]
+        #self.author = parameters[IMAGINGMANIFEST.AUTHOR]
+        #self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
+        #self.study = study
 
 
 class IMAGINGMANIFEST(object):
