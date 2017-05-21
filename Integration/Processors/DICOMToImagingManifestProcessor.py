@@ -1,15 +1,14 @@
 """ 
-More details about ImagingStudy object: https://www.hl7.org/fhir/imagingstudy.html
+More details about ImagingManifest object: https://www.hl7.org/fhir/imagingmanifest.html
 DICOM mapping table: https://www.hl7.org/fhir/imagingstudy-mappings.html
 
-get_instance_title() method needs some correction. FHIR's title definition is in comments below.
+TODO - Study - imagingStudy (0020,000D) - Study Instance UID
 """
 
 from Models.ImagingManifest import IMAGINGMANIFEST
-
-from Models.InstanceManifest import INSTANCE
-from Models.SeriesManifest import SERIES
-from Models.StudyManifest import STUDY
+from Models.Instance import INSTANCE
+from Models.Series import SERIES
+from Models.Study import STUDY
 
 
 def dcm_to_imaging_manifest(dicom_file):
@@ -23,7 +22,7 @@ def dcm_to_imaging_manifest(dicom_file):
         pass
 
     try:
-        parameters[IMAGINGMANIFEST.PATIENT] = dicom_file[0x10, 0x20].value
+        parameters[IMAGINGMANIFEST.PATIENT] = get_instance_patient(dicom_file)
     except KeyError:
         pass
 
@@ -42,28 +41,45 @@ def dcm_to_imaging_manifest(dicom_file):
     except KeyError:
         pass
 
-    try:
-        parameters[IMAGINGMANIFEST.STUDY] = dicom_file[0x40, 0xA160].value
-    except KeyError:
-        pass
-
-
     return parameters
 
 
-# FHIR's definition of title in DICOM mapping section:
-#    title = (0070,0080) | (0040,A043) > (0008,0104) | (0042,0010) | (0008,0008)
-# What actually means:
-#    title = ContentLabel | ConceptNameCodeSequence > CodeMeaning | DocumentTitle | ImageType
+def get_instance_patient(dicom_file):
+
+    try:
+        patientName = dicom_file[0x10, 0x10].value
+    except KeyError:
+        patientName = ''
+        pass
+
+    try:
+        patientID = ' ' + dicom_file[0x10, 0x20].value
+    except KeyError:
+        patientID = ''
+        pass
+
+    try:
+        issuerOfPatientID = ' ' + dicom_file[0x10, 0x21].value
+    except KeyError:
+        issuerOfPatientID = ''
+        pass
+
+    patient = patientName +  patientID  + issuerOfPatientID
+
+    return patient
+
 
 def dcm_to_study_manifest(dicom_file):
-    parameters = [None] * 4
+    parameters = [None] * 6
     try:
         parameters[STUDY.UID] = dicom_file[0x20, 0x0D].value
     except KeyError:
         print "Input file doesn't contain essential (0020,000D) tag."
         parameters[STUDY.UID] = None
         pass
+
+## TODO Study imagingStudy (0020,000D) - Study Instance UID
+
 
     try:
         parameters[STUDY.ENDPOINT] = None
@@ -75,7 +91,7 @@ def dcm_to_study_manifest(dicom_file):
 
 
 def dcm_to_series_manifest(dicom_file):
-    parameters = [None] * 2
+    parameters = [None] * 11
 
     try:
         parameters[SERIES.UID] = dicom_file[0x20, 0x0E].value
@@ -93,12 +109,12 @@ def dcm_to_series_manifest(dicom_file):
 
 
 def dcm_to_instance_manifest(dicom_file):
-    parameters = [None] * 2
+    parameters = [None] * 4
 
-   # try:
-    #    parameters[INSTANCE.SOPCLASS] = dicom_file[0x08, 0x16].value
-   # except KeyError:
-   #     pass
+    try:
+        parameters[INSTANCE.SOPCLASS] = dicom_file[0x08, 0x16].value
+    except KeyError:
+        pass
 
     try:
         parameters[INSTANCE.UID] = dicom_file[0x08, 0x18].value

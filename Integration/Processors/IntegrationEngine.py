@@ -5,9 +5,8 @@ from Models.ImagingStudy import ImagingStudy
 from Models.Series import Series
 from Models.Instance import Instance
 from Models.ImagingManifest import ImagingManifest
-from Models.InstanceManifest import InstanceManifest
-from Models.SeriesManifest import SeriesManifest
-from Models.StudyManifest import StudyManifest
+from Models.Study import Study
+
 from Processors.DICOMProcessor import dcm_to_imaging_study, dcm_to_series, dcm_to_instance
 from Processors.DICOMToImagingManifestProcessor import dcm_to_imaging_manifest, dcm_to_instance_manifest, dcm_to_series_manifest, dcm_to_study_manifest
 
@@ -29,15 +28,15 @@ class IntegrationEngine:
         imaging_study = ImagingStudy(im_st_parameters, series)
 
         manifest_instance_parameters = dcm_to_instance_manifest(self.dicom_file)
-        manifest_instance = InstanceManifest(manifest_instance_parameters)
+        manifest_instance = Instance(manifest_instance_parameters)
 
         manifest_series_parameters = dcm_to_series_manifest(self.dicom_file)
-        manifest_series = SeriesManifest(manifest_series_parameters)
+        manifest_series = Series(manifest_series_parameters, manifest_instance)
 
         manifest_study_parameters = dcm_to_study_manifest(self.dicom_file)
-        manifest_study = StudyManifest(manifest_study_parameters, imaging_study, manifest_series)
+        manifest_study = Study(manifest_study_parameters, imaging_study, manifest_series)
 
-        im_man_parameters = dcm_to_series_manifest(self.dicom_file)
+        im_man_parameters = dcm_to_imaging_manifest(self.dicom_file)
         imaging_manifest = ImagingManifest(im_man_parameters, manifest_study)
 
         # Debug for created object
@@ -50,6 +49,8 @@ class IntegrationEngine:
 
         print "imaging_manifest.identifier = ", imaging_manifest.identifier
         print "imaging_manifest.patient = ", imaging_manifest.patient
-        print "imaging_manifest.study.imagingStudy = ", manifest_study.imagingStudy  # Don't know what exactly should be here
-        print "imaging_manifest.instance.uid = ", manifest_instance.uid
+        print "imaging_manifest.study.imagingStudy = ", manifest_study.imagingStudy  # Don't know what exactly should it print
+        print "imaging_manifest.instance.sopclass = ", manifest_instance.sopClass
+        print "imaging_manifest.series.uid = ", manifest_series.uid
+
 
