@@ -26,7 +26,7 @@ class InstanceProcessor(DicomProcessor):
         for processing_config in processing_configs:
             failure_callback = None
             if processing_config['parameterName'] == INSTANCE.UID:
-                failure_callback = self.obligatoryParameterFailureCallback
+                failure_callback = self.obligatory_parameter_failure_callback
             self.process_dicom_tag(parameters, processing_config['parameterName'], processing_config['dicomTagCoordinates'], failure_callback)
 
         print "Finished mapping Instance object."
@@ -41,6 +41,6 @@ class InstanceProcessor(DicomProcessor):
             if failure_callback != None:
                 failure_callback()
 
-    def obligatoryParameterFailureCallback(self, tagName):
+    def obligatory_parameter_failure_callback(self):
         print "Input file doesn't contain an essential tag!"
         
