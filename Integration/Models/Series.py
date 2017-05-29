@@ -8,7 +8,6 @@ seriesParams = {SERIES.UID: 'some uid', SERIES.ENDPOINT: 'some endpoint'}
 series = Series(seriesParams, instance)
 """
 
-
 class Series:
     def __init__(self, parameters, instance):
         self.uid = parameters[SERIES.UID]
@@ -23,7 +22,6 @@ class Series:
         self.started = parameters[SERIES.STARTED]
         self.performer = parameters[SERIES.PERFORMER]
         self.instance = instance
-
 
 class SERIES(object):
     UID = 0

@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "files.exclude": {
+        "**/.pyc": true
+    }
+}
