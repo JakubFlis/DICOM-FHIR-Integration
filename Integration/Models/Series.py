@@ -7,10 +7,8 @@ instance = Instance(instanceParams)
 seriesParams = {SERIES.UID: 'some uid', SERIES.ENDPOINT: 'some endpoint'}
 series = Series(seriesParams, instance)
 """
-
-
 class Series:
-    def __init__(self, parameters, instance):
+    def __init__(self, parameters):
         self.uid = parameters[SERIES.UID]
         self.number = parameters[SERIES.NUMBER]
         self.modality = parameters[SERIES.MODALITY]
@@ -22,8 +20,7 @@ class Series:
         self.laterality = parameters[SERIES.LATERALITY]
         self.started = parameters[SERIES.STARTED]
         self.performer = parameters[SERIES.PERFORMER]
-        self.instance = instance
-
+        self.instance = parameters[SERIES.INSTANCE]
 
 class SERIES(object):
     UID = 0
@@ -37,3 +34,4 @@ class SERIES(object):
     LATERALITY = 8
     STARTED = 9
     PERFORMER = 10
+    INSTANCE = 11

@@ -9,16 +9,13 @@ imagingStudy = ImagingStudy(imagingStudy, series)
 studyParameters = {STUDY.UID: 'some uid', STUDY.IMAGINGSTUDY: 'uid of imagingstudy', STUDY.ENDPOINT: 'some endpoint'}
 study = Study(studyParameters, imagingStudy, series)
 """
-
-
 class Study:
-    def __init__(self, parameters, imaging_study, series):
+    def __init__(self, parameters):
         self.uid = parameters[STUDY.UID]
-        self.imagingStudy = imaging_study
+        self.imaging_study = parameters[STUDY.IMAGINGSTUDY]
         self.endpoint = parameters[STUDY.ENDPOINT]
-        self.series = series
-
 
 class STUDY(object):
     UID = 0
+    IMAGINGSTUDY = 1
     ENDPOINT = 2

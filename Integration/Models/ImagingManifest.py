@@ -12,15 +12,14 @@ imagingManifestParams = {IMAGINGMANIFEST.IDENTIFIER: 'some identifier', IMAGINGM
 imagingManifest = ImagingManifest(imagingManifestParams,study)
 """
 
-
 class ImagingManifest:
-    def __init__(self, parameters, study):
+    def __init__(self, parameters):
         self.identifier = parameters[IMAGINGMANIFEST.IDENTIFIER]
         self.patient = parameters[IMAGINGMANIFEST.PATIENT]
         self.authoringTime = parameters[IMAGINGMANIFEST.AUTHORINGTIME]
         self.author = parameters[IMAGINGMANIFEST.AUTHOR]
         self.description = parameters[IMAGINGMANIFEST.DESCRIPTION]
-        self.study = study
+        self.study = parameters[IMAGINGMANIFEST.STUDY]
 
 
 class IMAGINGMANIFEST(object):

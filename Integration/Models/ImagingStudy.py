@@ -8,7 +8,6 @@ imagingStudyParams = {IMAGINGSTUDY.UID: 'some uid', IMAGINGSTUDY.PATIENT: 'some 
 imagingStudy = ImagingStudy(imagingStudy, series)
 """
 
-
 class ImagingStudy:
     def __init__(self, parameters, series):
         self.uid = parameters[IMAGINGSTUDY.UID]
@@ -30,7 +29,6 @@ class ImagingStudy:
         self.reason = parameters[IMAGINGSTUDY.REASON]
         self.description = parameters[IMAGINGSTUDY.DESCRIPTION]
         self.series = series
-
 
 class IMAGINGSTUDY(object):
     UID = 0

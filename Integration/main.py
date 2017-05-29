@@ -5,7 +5,6 @@ import sys
 
 from Processors.IntegrationEngine import IntegrationEngine
 
-
 def main(argv):
     input_file = ''
     try:
@@ -24,7 +23,6 @@ def main(argv):
         IntegrationEngine(input_file)
     else:
         print 'Please specify input DICOM file by using -i <input_file> flag.'
-
 
 if __name__ == "__main__":
     main(sys.argv[1:])
