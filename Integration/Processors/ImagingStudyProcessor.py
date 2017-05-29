@@ -1,9 +1,3 @@
-""" 
-More details about ImagingStudy object: https://www.hl7.org/fhir/imagingstudy.html
-DICOM mapping table: https://www.hl7.org/fhir/imagingstudy-mappings.html
-
-get_instance_title() method needs some correction. FHIR's title definition is in comments below.
-"""
 from Models.ImagingStudy import IMAGINGSTUDY, ImagingStudy
 from DicomProcessor import DicomProcessor
 from SeriesProcessor import SeriesProcessor
@@ -74,12 +68,13 @@ class ImagingStudyProcessor(DicomProcessor):
 
         return ImagingStudy(parameters, SeriesProcessor(self.dicom_file).process_dicom_file())
 
-    def process_dicom_tag(self, parameters, parameterName, dicomTagCoordinates, failureCallback):
+    def process_dicom_tag(self, parameters, parameter_name, dicom_tag_coordinates, failure_callback):
         try:
-            parameters[parameterName] = self.dicom_file[dicomTagCoordinates].value
+            parameters[parameter_name] = self.dicom_file[dicom_tag_coordinates].value
         except KeyError:
-            parameters[parameterName] = None
-            pass
+            parameters[parameter_name] = None
+            if failure_callback != None:
+                failure_callback()
 
     def obligatory_parameter_failure_callback(self):
         print "Input file doesn't contain an essential tag!"

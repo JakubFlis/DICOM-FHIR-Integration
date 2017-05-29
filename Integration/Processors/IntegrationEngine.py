@@ -1,5 +1,5 @@
 import dicom
-from ImagingStudyProcessor import ImagingStudyProcessor
+from ImagingManifestProcessor import ImagingManifestProcessor
 
 class IntegrationEngine:
     def __init__(self, dcm_file_path):
@@ -8,4 +8,4 @@ class IntegrationEngine:
         except IOError:
             print "There's no file under path", dcm_file_path
 
-        ImagingStudyProcessor(self.dicom_file).process_dicom_file()
+        ImagingManifestProcessor(self.dicom_file).process_dicom_file()

@@ -4,7 +4,7 @@ from Processors.DicomProcessor import DicomProcessor
 class InstanceProcessor(DicomProcessor):
     def processDicomFile(self):
         parameters = dict()
-        processingConfigs = [
+        processing_configs = [
             {
                 'parameterName': INSTANCE.UID,
                 'dicomTagCoordinates': [0x08, 0x18]
@@ -23,21 +23,23 @@ class InstanceProcessor(DicomProcessor):
             }
         ]
 
-        for processingConfig in processingConfigs:
-            failureCallback = None
-            if processingConfig['parameterName'] == INSTANCE.UID:
-                failureCallback = self.obligatoryParameterFailureCallback
-            self.processDicomTag(parameters, processingConfig['parameterName'], processingConfig['dicomTagCoordinates'], failureCallback)
+        for processing_config in processing_configs:
+            failure_callback = None
+            if processing_config['parameterName'] == INSTANCE.UID:
+                failure_callback = self.obligatoryParameterFailureCallback
+            self.process_dicom_tag(parameters, processing_config['parameterName'], processing_config['dicomTagCoordinates'], failure_callback)
 
         print "Finished mapping Instance object."
 
         return Instance(parameters)
 
-    def processDicomTag(self, parameters, parameterName, dicomTagCoordinates, failureCallback):
+    def process_dicom_tag(self, parameters, parameter_name, dicom_tag_coordinates, failure_callback):
         try:
-            parameters[parameterName] = self.dicom_file[dicomTagCoordinates].value
+            parameters[parameter_name] = self.dicom_file[dicom_tag_coordinates].value
         except KeyError:
-            parameters[parameterName] = None
+            parameters[parameter_name] = None
+            if failure_callback != None:
+                failure_callback()
 
     def obligatoryParameterFailureCallback(self, tagName):
         print "Input file doesn't contain an essential tag!"

@@ -37,6 +37,10 @@ class SeriesProcessor(DicomProcessor):
             {
                 'parameterName': SERIES.LATERALITY,
                 'dicomTagCoordinates': [0x20, 0x60]
+            },
+            {
+                'parameterName': SERIES.PERFORMER,
+                'dicomTagCoordinates': [0x08, 0x1050]
             }
         ]
 
@@ -54,24 +58,19 @@ class SeriesProcessor(DicomProcessor):
         except KeyError:
             pass
 
-        try:
-            performer = self.dicom_file[0x08, 0x1050].value
-        except KeyError:
-            try:
-                performer = self.dicom_file[0x08, 0x1072].value
-            except KeyError:
-                performer = None
-        parameters[SERIES.PERFORMER] = performer
+        parameters[SERIES.INSTANCE] = InstanceProcessor(self.dicom_file).processDicomFile()
+
         print "Finished mapping Series instance."
 
-        return Series(parameters, InstanceProcessor(self.dicom_file).processDicomFile())
+        return Series(parameters)
 
-    def process_dicom_tag(self, parameters, parameterName, dicomTagCoordinates, failureCallback):
+    def process_dicom_tag(self, parameters, parameter_name, dicom_tag_coordinates, failure_callback):
         try:
-            parameters[parameterName] = self.dicom_file[dicomTagCoordinates].value
+            parameters[parameter_name] = self.dicom_file[dicom_tag_coordinates].value
         except KeyError:
-            parameters[parameterName] = None
-            pass
+            parameters[parameter_name] = None
+            if failure_callback != None:
+                failure_callback()
 
     def obligatoryParameterFailureCallback(self, tagName):
         print "Input file doesn't contain an essential tag!"
