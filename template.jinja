@@ -1,0 +1,22 @@
+{% for study in studies %}
+{
+  "resourceType": "ImagingStudy",
+  "id": {{ study.getAnyDicom().readProperty("ID coords") }}
+  "series": [
+    {% for series in study.series %}
+      { 
+        "id": {{ series.path }},
+        "modality": {{ series.getAnyDicom().readProperty("Modality coords") }}
+        "instance": [ 
+          {% for instance in series.instances %}
+          { 
+            "uid": {{ instance.pathToFile }},
+            "seriesId": {{ instance.seriesPath }}
+          }{{ "," if not loop.last }}
+          {% endfor %}
+        ]
+      }{{ "," if not loop.last }}
+    {% endfor %}
+  ]
+}{{ "," if not loop.last }}
+{% endfor %}
