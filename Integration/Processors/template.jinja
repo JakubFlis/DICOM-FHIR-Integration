@@ -1,12 +1,12 @@
 {% for study in studies %}
 {
   "resourceType": "ImagingStudy",
-  "id": {{ study.getAnyDicom().readProperty("ID coords") }}
+  "id": {{ study.get_any_dicom().read_property("ID coords") }}
   "series": [
     {% for series in study.series %}
       { 
         "id": {{ series.path }},
-        "modality": {{ series.getAnyDicom().readProperty("Modality coords") }}
+        "modality": {{ series.get_any_dicom().read_property("Modality coords") }}
         "instance": [ 
           {% for instance in series.instances %}
           { 

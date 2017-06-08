@@ -1,19 +1,14 @@
-"""
-This class is both used in ImagingStudy and ImagingManifest
-In ImagingManifest it does not use all the parameters(only uid, sopClass)
-Initializing the class:
-instanceParams = {INSTANCE.TITLE: 'some title', INSTANCE.UID: 'some uid'}
-instance = Instance(instanceParams)
-"""
-class Instance:
-    def __init__(self, parameters):
-        self.uid = parameters[INSTANCE.UID]
-        self.number = parameters[INSTANCE.NUMBER]
-        self.sopClass = parameters[INSTANCE.SOPCLASS]
-        self.title = parameters[INSTANCE.TITLE]
+""" Instance module """
+from Folder import Folder
+import string
+import random
 
-class INSTANCE(object):
-    UID = 0
-    NUMBER = 1
-    SOPCLASS = 2
-    TITLE = 3
+class Instance:
+    """ This class represents an Instace file (DICOM), that is inside a Series folder. """
+    series_path = None
+
+    def __init__(self):
+        self.path_to_file = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(3))
+
+    def read_property(self, coords):
+        return "A property from coords: " + coords + " of path " + str(self.path_to_file)

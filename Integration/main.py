@@ -1,28 +1,39 @@
-#!/usr/bin/python
-
 import getopt
 import sys
+from Processors.ConfigProcessor import ConfigProcessor
 
-from Processors.IntegrationEngine import IntegrationEngine
+def argument_error_print():
+    print 'DICOM processor requires a path to the root folder, which should contain other folders and files grouped as follows:'
+    print '|- Root (a Patient folder)'
+    print '   |- Studies'
+    print '      |- Series'
+    print '         |- Instances (.dcm files)'
+    print 'All DICOM files are processed according to config file provided.'
+    print '\033[91m[!] Please specify the root path by using -i <root_folder_path> flag.'
+    print '\033[91m[!] Please specife the configuration file by using -c <path_to_config_file> flag.'
 
 def main(argv):
-    input_file = ''
+    root_path = ''
+    config_path = ''
+
     try:
-        opts, args = getopt.getopt(argv, "hi:", ["ifile="])
+        opts, args = getopt.getopt(argv, "hi:c:", ["path=", "config="])
     except getopt.GetoptError:
-        print 'Please specify input DICOM file by using -i <input_file> flag.'
+        argument_error_print()
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'test.py -i <input_file>'
+            argument_error_print()
             sys.exit()
-        elif opt in ("-i", "--ifile"):
-            input_file = arg
+        elif opt in ("-i", "--path"):
+            root_path = arg
+        elif opt in ("-c", "--config"):
+            config_path = arg
 
-    if input_file != '':
-        IntegrationEngine(input_file)
+    if root_path != '' and config_path != '':
+        ConfigProcessor(root_path, config_path)
     else:
-        print 'Please specify input DICOM file by using -i <input_file> flag.'
+        argument_error_print()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
