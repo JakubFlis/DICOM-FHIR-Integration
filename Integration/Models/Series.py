@@ -11,5 +11,6 @@ class Series(Folder):
         self.path = path
 
     def get_any_dicom(self):
+        """ Gets a random DICOM file from underlying folders. """
         return random.choice(self.instances)
         
