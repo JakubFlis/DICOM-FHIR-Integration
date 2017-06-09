@@ -6,17 +6,44 @@ This application requires [Python 2.7.*](https://www.python.org/download/release
 
 Dependencies:
 - [PyDicom](http://www.pydicom.org/)
+- [Jinja2]http://jinja.pocoo.org/docs/2.9/
 
 Dependencies can be installed via `pip` command, for example:
 
 ```sh
 $ pip install pydicom
+$ pip install jinja
 ```
 
 ### Usage
 
-A file path with .dcm extension (DICOM file) must be provided using -i <inputfile> flag, for example:
+The DICOM processor requires a path to the root folder, which should contain other folders and files grouped as follows:
+```sh
+|- Root 
+   |- Patients
+      |- Studies
+         |- Series
+            |- Instances (.dcm files)
+```
+
+Following flags must be provided:
+- For specifying the root path:
+```sh
+-i <root_path>
+```
+- For specifying the template (configuration file) path:
+```sh
+-c <template_path>
+```
+- For specifying the output file path:
+```sh
+-o <output_file_path>
+```
+
+All three flags are mandatory.
+
+Example:
 
 ```sh
-$ main.py -i SampleDICOM/USG.dcm
+$ python main.py -i ./DicomRootFolder -c ./template.jinja -o output.txt
 ```

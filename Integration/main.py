@@ -10,14 +10,16 @@ def argument_error_print():
     print '         |- Instances (.dcm files)'
     print 'All DICOM files are processed according to config file provided.'
     print '\033[91m[!] Please specify the root path by using -i <root_folder_path> flag.'
-    print '\033[91m[!] Please specife the configuration file by using -c <path_to_config_file> flag.'
+    print '\033[91m[!] Please specify the configuration file by using -c <path_to_config_file> flag.'
+    print '\033[91m[!] Please specify the output file by using -o <path_to_output_file> flag.'
 
 def main(argv):
     root_path = ''
     config_path = ''
+    output_path = ''
 
     try:
-        opts, args = getopt.getopt(argv, "hi:c:", ["path=", "config="])
+        opts, args = getopt.getopt(argv, "hi:c:o:", ["path=", "config=", "output="])
     except getopt.GetoptError:
         argument_error_print()
         sys.exit(2)
@@ -29,9 +31,11 @@ def main(argv):
             root_path = arg
         elif opt in ("-c", "--config"):
             config_path = arg
+        elif opt in ("-o", "--output"):
+            output_path = arg
 
     if root_path != '' and config_path != '':
-        IntegrationProcessor(config_path, root_path).integrate()
+        IntegrationProcessor(config_path, root_path, output_path).integrate()
     else:
         argument_error_print()
 
