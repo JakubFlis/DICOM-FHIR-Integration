@@ -1,0 +1,21 @@
+{% for study in studies %}
+{
+  "resourceType": "ImagingStudy",
+  "id": "{{ study.get_any_dicom().read_property("0x08", "0x18") }}",
+  "series": [
+    {% for series in study.series %}
+      { 
+        "id": "{{ series.get_any_dicom().read_property("0x20", "0x0E") }}",
+        "instance": [ 
+          {% for instance in series.instances %}
+          { 
+            "uid": "{{ instance.read_property("0x20", "0x11") }}",
+            "seriesId": "{{ instance.read_property("0x08", "0x60") }}"
+          }{{ "," if not loop.last }}
+          {% endfor %}
+        ]
+      }{{ "," if not loop.last }}
+    {% endfor %}
+  ]
+}{{ "," if not loop.last }}
+{% endfor %}
