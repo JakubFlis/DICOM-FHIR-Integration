@@ -1,4 +1,5 @@
 """ IntegrationProcessor module """
+import datetime
 from Processors.FileProcessor import FileProcessor
 from Processors.ConfigProcessor import ConfigProcessor
 
@@ -14,12 +15,17 @@ class IntegrationProcessor(object):
         """ Main integrating function. Binds FileProcessor and ConfigProcessor together.
         First, an array of patients is being made based on what is inside the folder under the given path.
         Then, the ConfigProcessor parses the template from the given path and renders the output. """
+        print "\033[95mStarted Integration Engine on " + unicode(datetime.datetime.now()) + "\033[0m"
         # Creating the patient array
-        patients = FileProcessor.make_patients(self.root_path)
+        print "Processing the root folder structure ..."
+        patients = FileProcessor().make_patients(self.root_path)
         # Generating result based on the config file
+        print "Reading the template file..."
         result = ConfigProcessor(self.config_path, patients).render_template()
         # Writing the result to the output file
+        print "Saving the output file..."
         self.save_to_file(result)
+        print "\033[92mFinished.\033[0m"
 
     def save_to_file(self, string):
         """ Saves given string to a file. """

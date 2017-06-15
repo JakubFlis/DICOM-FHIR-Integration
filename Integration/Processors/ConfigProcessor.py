@@ -12,4 +12,5 @@ class ConfigProcessor(object):
 
     def render_template(self):
         """ Renders the output content based on given template. """
+        print "Rendering the output file..."
         return self.template.render(self.template_vars)
