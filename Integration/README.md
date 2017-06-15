@@ -60,14 +60,13 @@ $ python main.py -i ./DicomRootFolder -c ./template.jinja -o output.txt
 The Integration engine uses Jinja2 templating system to map DICOM objects into output files. [Jinja2 documentation](http://jinja.pocoo.org/docs/2.9/)
 
 Most common templating expressions:
-`{% for x in y %}` - a for loop enumerating through `y` variable. Must end with `{% endfor %}` expression.
-`{{ x }}` - prinitng the `x` variable value to the output file. `{{ x.y() }}` will call `y()` function that is accessible from object `x`.
+- `{% for x in y %}` - a for loop enumerating through `y` variable. Must end with `{% endfor %}` expression.
+- `{{ x }}` - prinitng the `x` variable value to the output file. `{{ x.y() }}` will call `y()` function that is accessible from object `x`.
 
-While creating a template, following properties are available for the user: `patients` (an array of Patient objects), `studies` (stored in every `patients` array element), `series` (stored in every `studies` array element) and `instances` (stored in every `series` array element). 
-
-`patients`, `study` and `series` objects have a property called `random_dicom`, which allows the user to access any object from given set of objects. 
-
-`instance` objects have a function called `read_property` that reads the DICOM file's tag under given coordinates. 
+While creating a template, following properties are available for the user: 
+- `patients` (an array of Patient objects), `studies` (stored in every `patients` array element), `series` (stored in every `studies` array element) and `instances` (stored in every `series` array element). 
+- `patients`, `study` and `series` objects have a property called `random_dicom`, which allows the user to access any object from given set of objects. 
+- `instance` objects have a function called `read_property` that reads the DICOM file's tag under given coordinates. 
 
 Example use case:
 
