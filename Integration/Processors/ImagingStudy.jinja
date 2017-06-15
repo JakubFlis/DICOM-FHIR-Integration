@@ -6,10 +6,7 @@
   "identifier": "{{ study.get_any_dicom().read_property("0x20", "0x10") }}",
   "modalityList": "{{ study.get_any_dicom().read_property("0x08", "0x61") }}",
   "patient": "{{ study.get_any_dicom().read_property("0x10", "0x10") }}",
-  "started": "{{
-      study.get_any_dicom().read_property("0x08", "0x20") + ' ' +
-      study.get_any_dicom().read_property("0x08", "0x30")
-      }}",
+  "started": "{{ study.get_any_dicom().read_property("0x08", "0x20") }}",
   "interpreter": "{{ study.get_any_dicom().read_property("0x08", "0x1060") }}",
   "numberOfSeries": "{{ study.get_any_dicom().read_property("0x20", "0x1206") }}",
   "numberOfInstances": "{{ study.get_any_dicom().read_property("0x20", "0x1208") }}",
@@ -26,10 +23,7 @@
       "availability": "{{ series.get_any_dicom().read_property("0x08", "0x56") }}",
       "bodySite": "{{ series.get_any_dicom().read_property("0x18", "0x15") }}",
       "laterality": "{{ series.get_any_dicom().read_property("0x20", "0x60") }}",
-      "started": "{{
-          series.get_any_dicom().read_property("0x08", "0x21") + ' ' +
-          series.get_any_dicom().read_property("0x08", "0x31")
-          }}",
+      "started": "{{ series.get_any_dicom().read_property("0x08", "0x21") }}",
       "performer": "{{ series.get_any_dicom().read_property("0x08", "0x1050") }}",
       "instance": [
         {% for instance in series.instances %}
