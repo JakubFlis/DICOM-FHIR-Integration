@@ -6,13 +6,20 @@ This application requires [Python 2.7.*](https://www.python.org/download/release
 
 Dependencies:
 - [PyDicom](http://www.pydicom.org/)
-- [Jinja2]http://jinja.pocoo.org/docs/2.9/
+- [Jinja2](http://jinja.pocoo.org/docs/2.9/)
 
 Dependencies can be installed via `pip` command, for example:
 
 ```sh
 $ pip install pydicom
 $ pip install jinja
+```
+
+Instead of using `pip`, it is also possible to use `easy_install` for installing dependencies:
+
+```sh
+$ easy_install pydicom
+$ easy_install jinja
 ```
 
 ### Usage
