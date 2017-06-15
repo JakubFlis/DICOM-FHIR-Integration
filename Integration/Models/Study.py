@@ -4,12 +4,8 @@ from Folder import Folder
 
 class Study(Folder):
     """ This class represents a Study folder, that is inside a Patient folder. """
-    path = None
 
     def __init__(self, series, path):
         self.series = series
         self.path = path
-
-    def get_any_dicom(self):
-        """ Gets a random DICOM file from underlying folders. """
-        return random.choice(self.series).get_any_dicom()
+        self.random_dicom = random.choice(self.series).random_dicom

@@ -8,7 +8,7 @@ class ConfigProcessor(object):
         template_loader = jinja2.FileSystemLoader(searchpath=path)
         template_environment = jinja2.Environment(loader=template_loader, trim_blocks=True, lstrip_blocks=True)
         self.template = template_environment.get_template(file)
-        self.template_vars = {"studies": patients[0].studies}
+        self.template_vars = {"patients": patients}
 
     def render_template(self):
         """ Renders the output content based on given template. """

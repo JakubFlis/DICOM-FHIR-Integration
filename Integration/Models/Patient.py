@@ -8,7 +8,5 @@ class Patient(Folder):
     def __init__(self, studies, path):
         self.studies = studies
         self.path = path
-
-    def get_any_dicom(self):
-        return random.choice(self.studies)
+        self.random_dicom = random.choice(self.studies).random_dicom
         
