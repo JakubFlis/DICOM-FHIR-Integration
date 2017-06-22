@@ -1,0 +1,9 @@
+{% for patient in patients %}
+    {% for study in patient.studies %}
+        {% for series in study.series %}
+            {% for instance in series.instances %}
+ID: {{ instance.read_property("0x08", "0x18") }}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
