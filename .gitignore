@@ -146,3 +146,8 @@ fabric.properties
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.idea/vcs.xml
+.idea/DICOMVelocity.iml
+.idea/misc.xml
+.idea/modules.xml
+Integration/output.txt

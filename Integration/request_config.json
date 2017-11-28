@@ -1,0 +1,8 @@
+{
+	"URL": "http://vps407447.ovh.net:3000/test",
+	"Method": "GET",
+	"Headers": {
+		"Content-Type": "text/plain",
+        "Content-Length": "42"
+	}
+}

@@ -1,6 +1,7 @@
 import getopt
 import sys
 from Processors.IntegrationProcessor import IntegrationProcessor
+import RequestHandler
 
 def argument_error_print():
     print 'DICOM processor requires a path to the root folder, which should contain other folders and files grouped as follows:'
@@ -38,6 +39,8 @@ def main(argv):
         IntegrationProcessor(config_path, root_path, output_path).integrate()
     else:
         argument_error_print()
+
+    RequestHandler.RequestHandler()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
