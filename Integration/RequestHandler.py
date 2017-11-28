@@ -10,7 +10,6 @@ class RequestHandler(object):
         self.url = self.data["URL"]
         self.method =  self.data["Method"]
         self.headers = self.data["Headers"]
-        print self.send("test").status_code
 
     def send(self, data):
         if self.method == "PUT":

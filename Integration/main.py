@@ -40,7 +40,5 @@ def main(argv):
     else:
         argument_error_print()
 
-    RequestHandler.RequestHandler()
-
 if __name__ == "__main__":
     main(sys.argv[1:])

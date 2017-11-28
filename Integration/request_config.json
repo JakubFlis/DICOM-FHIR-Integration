@@ -1,8 +1,7 @@
 {
-	"URL": "http://vps407447.ovh.net:3000/test",
-	"Method": "GET",
+	"URL": "REPLACE_ME",
+	"Method": "REPLACE_ME",
 	"Headers": {
-		"Content-Type": "text/plain",
-        "Content-Length": "42"
+		"Content-Type": "REPLACE_ME"
 	}
 }
