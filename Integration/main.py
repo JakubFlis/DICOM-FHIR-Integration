@@ -1,7 +1,6 @@
 import getopt
 import sys
 from Processors.IntegrationProcessor import IntegrationProcessor
-import RequestHandler
 
 def argument_error_print():
     print 'DICOM processor requires a path to the root folder, which should contain other folders and files grouped as follows:'
