@@ -12,11 +12,12 @@ class RequestHandler(object):
         self.headers = self.data["Headers"]
 
     def send(self, data):
-        if self.method == "PUT":
+        if self.method == "POST":
             rsp = requests.post(self.url, json=data, headers=self.headers)
         elif self.method == "GET":
             rsp = requests.get(self.url, json=data, headers=self.headers)
+        elif self.method == "PUT":
+            rsp = requests.put(self.url, json=data, headers=self.headers)
         else:
-            rsp = None
-            print "Declare proper method (PUT or GET) in config JSON file."
-        return rsp
+            print "Declare proper method in config JSON file."
+        return rsp.text

@@ -1,44 +1,49 @@
-{% for patient in patients %}
-{% for study in patient.studies %}
 {
-  "resourceType": "ImagingStudy",
-  "uid": "{{ study.random_dicom .read_property("0x20", "0x0D") }}",
-  "accession": "{{ study.random_dicom .read_property("0x08", "0x50") }}",
-  "identifier": "{{ study.random_dicom .read_property("0x20", "0x10") }}",
-  "modalityList": "{{ study.random_dicom .read_property("0x08", "0x61") }}",
-  "patient": "{{ study.random_dicom .read_property("0x10", "0x10") }}",
-  "started": "{{ study.random_dicom .read_property("0x08", "0x20") }}",
-  "interpreter": "{{ study.random_dicom .read_property("0x08", "0x1060") }}",
-  "numberOfSeries": "{{ study.random_dicom .read_property("0x20", "0x1206") }}",
-  "numberOfInstances": "{{ study.random_dicom .read_property("0x20", "0x1208") }}",
-  "procedureReference": "{{ study.random_dicom .read_property("0x08", "0x1032") }}",
-  "description": "{{ study.random_dicom .read_property("0x08", "0x1030") }}",
-  "series": [
-    {% for series in study.series %}
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [ 
+    {% for patient in patients %}
+    {% for study in patient.studies %}
     {
-      "uid": "{{ series.random_dicom.read_property("0x20", "0x0E") }}",
-      "number": "{{ series.random_dicom.read_property("0x20", "0x11") }}",
-      "modality": "{{ series.random_dicom.read_property("0x08", "0x60") }}",
-      "description": "{{ series.random_dicom.read_property("0x08", "0x103E") }}",
-      "numberOfInstances": "{{ series.random_dicom.read_property("0x20", "0x1209") }}",
-      "availability": "{{ series.random_dicom.read_property("0x08", "0x56") }}",
-      "bodySite": "{{ series.random_dicom.read_property("0x18", "0x15") }}",
-      "laterality": "{{ series.random_dicom.read_property("0x20", "0x60") }}",
-      "started": "{{ series.random_dicom.read_property("0x08", "0x21") }}",
-      "performer": "{{ series.random_dicom.read_property("0x08", "0x1050") }}",
-      "instance": [
-        {% for instance in series.instances %}
-        {
-          "uid": "{{ instance.read_property("0x08", "0x18") }}",
-          "number": "{{ instance.read_property("0x20", "0x13") }}",
-          "sopClass": "{{ instance.read_property("0x08", "0x16") }}",
-          "title": "{{ instance.read_property("0x70", "0x80") }}"
-        }{{ "," if not loop.last }}
-        {% endfor %}
-      ]
+    "request": {
+            "method": "POST"
+    },
+    "resource":
+      {
+        "resourceType": "ImagingStudy",
+        "uid": "{{ study.random_dicom.read_property("0x20", "0x0D") }}",
+        "accession": "{{ study.random_dicom.read_property("0x08", "0x50") }}",
+        "modalityList": "{{ study.random_dicom.read_property("0x08", "0x61") }}",
+        "patient": "{{ study.random_dicom.read_property("0x10", "0x10") }}",
+        "interpreter": "{{ study.random_dicom.read_property("0x08", "0x1060") }}",
+        "procedureReference": "{{ study.random_dicom .read_property("0x08", "0x1032") }}",
+        "description": "{{ study.random_dicom.read_property("0x08", "0x1030") }}",
+        "series": [
+          {% for series in study.series %}
+          {
+            "uid": "{{ series.random_dicom.read_property("0x20", "0x0E") }}",
+            "number": "{{ series.random_dicom.read_property("0x20", "0x11") }}",
+            "modality": "{{ series.random_dicom.read_property("0x08", "0x60") }}",
+            "description": "{{ series.random_dicom.read_property("0x08", "0x103E") }}",
+            "bodySite": "{{ series.random_dicom.read_property("0x18", "0x15") }}",
+            "laterality": "{{ series.random_dicom.read_property("0x20", "0x60") }}",
+            "performer": "{{ series.random_dicom.read_property("0x08", "0x1050") }}",
+            "instance": [
+              {% for instance in series.instances %}
+              {
+                "uid": "{{ instance.read_property("0x08", "0x18") }}",
+                "number": "{{ instance.read_property("0x20", "0x13") }}",
+                "sopClass": "{{ instance.read_property("0x08", "0x16") }}",
+                "title": "{{ instance.read_property("0x70", "0x80") }}"
+              }{{ "," if not loop.last }}
+              {% endfor %}
+            ]
+          }{{ "," if not loop.last }}
+          {% endfor %}
+        ]
+      }
     }{{ "," if not loop.last }}
     {% endfor %}
+    {% endfor %}
   ]
-}{{ "," if not loop.last }}
-{% endfor %}
-{% endfor %}
+}
