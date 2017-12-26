@@ -1,4 +1,4 @@
-# DICOM integration with Kainos Evolve Velocity platform
+# DICOM integration with FHIR HL7 based backend server
 > A group project from Gdansk University of Technology
 
 ### Info
