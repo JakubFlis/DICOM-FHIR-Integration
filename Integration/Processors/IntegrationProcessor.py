@@ -28,9 +28,12 @@ class IntegrationProcessor(object):
         # Writing the result to the output file
         print "Saving the output file..."
         self.save_to_file(result)
-        # Sending a request to FHIR backend
-        print "Making a " + self.request_handler.method + " request to " + self.request_handler.url
-        self.send_final_request()
+        # Sending a request to FHIR backend (if applicable)
+        if self.request_handler.should_send_requests == "true":
+            print "Making a " + self.request_handler.method + " request to " + self.request_handler.url
+            self.send_final_request()
+        else:
+            print "Making requests is turned off."
 
         print "\033[92mFinished.\033[0m"
 

@@ -1,4 +1,5 @@
 {
+	"ShouldSendRequests": "REPLACE_ME",
 	"URL": "REPLACE_ME",
 	"Method": "REPLACE_ME",
 	"Headers": {
