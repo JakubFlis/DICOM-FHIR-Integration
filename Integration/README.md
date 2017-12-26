@@ -1,4 +1,4 @@
-# DICOM integration with Kainos Evolve Velocity platform - Integration module
+# DICOM integration with FHIR HL7 based backend server - Integration module
 > A group project from Gdansk University of Technology
 
 ### Installation
@@ -15,7 +15,7 @@ Dependencies can be installed via `pip` command, for example:
 $ pip install pydicom
 $ pip install jinja
 $ pip install requests
-```
+``` 
 
 Instead of using `pip`, it is also possible to use `easy_install` for installing dependencies:
 

@@ -16,5 +16,4 @@ Python project for processing DICOM files and for Velocity integration.
 *TBC*
 
 ### Webapp
-
-*TBC*
+Frontend web application based entirely on [AdminLTE](https://github.com/almasaeed2010/AdminLTE) project template.
