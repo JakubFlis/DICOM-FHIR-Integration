@@ -15,7 +15,7 @@ class Instance(object):
     def read_property(self, coord_x, coord_y):
         """ Reads the DICOM file with given coordinates and
         returns a string with its content. """
-        result = None
+        result = ""
         try:
             result = self.dicom_file[int(coord_x, 16), int(coord_y, 16)].value
         except KeyError:
