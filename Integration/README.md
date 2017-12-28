@@ -86,3 +86,23 @@ Sample template that would print all IDs in new line would be as follows:
     {% endfor %}
 {% endfor %}
 ```
+
+### Integration with backend server
+
+After a sucessfull conversion from DICOM to designated format, there is a possiblity to send results to a backend server via a REST call. The backend server doesn't have to be a FHIR server - it can be, for example, a CRUD system for a database like PostgreSQL, MySQL etc. It all depends on how the template is built - the result of the integration process is being added to the REST call as a request body. 
+In order to make a REST call, `request_config.json` configuration file should be properly edited. It consists of following parts:
+
+```sh
+{
+	"ShouldSendRequests": "false",
+	"URL": "REPLACE_ME",
+	"Method": "REPLACE_ME",
+	"Headers": {
+		"Content-Type": "REPLACE_ME"
+	}
+}
+```
+- `ShouldSendRequests` - enables or disables sending a REST request at the end of integration process. Valid options: `true` and `false`. Default value: `false`
+- `URL` - specifies which URL should be the request send to
+- `Method` - specifies the REST method. Currently supported methods: `POST`, `GET`, `PUT`
+- `Headers` - specifies headers for the REST call
