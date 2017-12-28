@@ -10,7 +10,7 @@ This repository consists of three main folders:
 - Webapp
 
 ### Integration
-Python project for processing DICOM files and for Velocity integration.
+Python project for processing DICOM files into a designated format specified by a template.
 
 ### Server
 Installation guide for the [HAPI-FHIR](https://github.com/jamesagnew/hapi-fhir) backend server.
