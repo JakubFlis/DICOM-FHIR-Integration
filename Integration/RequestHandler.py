@@ -21,4 +21,4 @@ class RequestHandler(object):
             rsp = requests.put(self.url, json=data, headers=self.headers)
         else:
             print "Declare proper method in config JSON file."
-        return rsp.text
+        return rsp.text.encode('utf-8')
