@@ -1,4 +1,4 @@
-
+// !!! CHANGE THIS URL TO PROPER SERVER URL VALUE !!! // 
 var imagingStudyUrl = "http://api.fhir.eti:8080/hapi-fhir-jpaserver-example/baseDstu3/ImagingStudy?_pretty=true";
 
 function httpGetAsync(theUrl, callback) {
@@ -18,11 +18,33 @@ function refreshAllImagingStudiesCounterWidget(data) {
     jQuery("#total-imagingstudy-objects-loading").hide();
 }
 
+// -- All Series counter Widget -- //
+function refreshAllSeriesCounterWidget(data) {
+    var parsedJson = JSON.parse(data);
+    var seriesInTotal = 0;
+    var instancesInTotal = 0;
+
+    parsedJson.entry.forEach(element => {
+        seriesInTotal += element.resource.series.length;
+        element.resource.series.forEach(series => {
+            instancesInTotal += series.instance.length;
+        });
+    });
+
+    // Series
+    jQuery("#total-series-objects").html(seriesInTotal);
+    jQuery("#total-series-objects-loading").hide();
+
+    // Instances
+    jQuery("#total-instances-objects").html(instancesInTotal);
+    jQuery("#total-instances-objects-loading").hide();
+}
+
 // -- ImagingStudy list widget -- //
 function prepareInstancesHTML(series) {
     var instanceHtml = "";
     if (series.instance != undefined && series.instance.length > 0) {
-        instanceHtml += " (" + series.instance.length + ")" + "<ul>";
+        instanceHtml += " (Total: " + series.instance.length + ")" + "<ul>";
         series.instance.forEach(instance => {
             instanceHtml += "<li>" + instance.sopClass + "</li>";
         });
@@ -53,12 +75,12 @@ function refreshImagingStudyListWidget(data) {
 
     parsedJson.entry.forEach(element => {
         var id = element.resource.id;
-        var description = element.resource.description;
-        var lastUpdated = element.resource.meta.lastUpdated;
+        var description = element.resource.description == undefined ? element.resource.series[0].description : element.resource.description ;
+        var lastUpdated = new Date(element.resource.meta.lastUpdated).toDateString();
         var numberOfSeries = element.resource.series.length;
         var seriesList = prepareSeriesHTML(element.resource.series);
 
-        contentSection += "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#" + id + "\">" + description + "</a></h4></div><div id=\"" + id + "\" class=\"panel-collapse collapse\"><div class=\"panel-body\"><!-- content start -->ID: <i>" + id + "</i><br/>Last updated: <i>" + lastUpdated + "</i><br/><u>Series:</u><br/>" + seriesList + "<!-- content end --></div></div></div>";
+        contentSection += "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#" + id + "\">" + description + "</a><span class=\"pull-right badge bg-blue\">" + numberOfSeries + " series</span></h4></div><div id=\"" + id + "\" class=\"panel-collapse collapse\"><div class=\"panel-body\"><!-- content start -->ID: <i>" + id + "</i><br/>Last updated: <i>" + lastUpdated + "</i><br/><u>Series:</u><br/>" + seriesList + "<!-- content end --></div></div></div>";
     });
 
     jQuery("#imagingstudy-box").html(startSection + contentSection + endSection);
@@ -67,5 +89,6 @@ function refreshImagingStudyListWidget(data) {
 
 httpGetAsync(imagingStudyUrl, function(data) {
     refreshAllImagingStudiesCounterWidget(data);
+    refreshAllSeriesCounterWidget(data);
     refreshImagingStudyListWidget(data);
 });

@@ -524,31 +524,61 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div style="width: 400px;">
+        <!-- ImagingStudy counter widget box -->
+        <div  class="col-md-3 col-sm-6 col-xs-12" style="width: 400px; margin-left: 35px;">
           <div class="info-box">
               <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
               <div class="info-box-content">
-                  <span class="info-box-text">ImaingStudy objects in total</span>
+                  <span class="info-box-text"><b>ImaingStudy</b> objects in total</span>
                   <h1><span id="total-imagingstudy-objects" class="info-box-number">-- --</span></h1>
                   <div class="overlay" id="total-imagingstudy-objects-loading">
                       <i class="fa fa-refresh fa-spin"></i>
                   </div>
               </div><!-- /.info-box-content -->
           </div><!-- /.info-box -->
-      </div>
+       </div>
+
+      <!-- Series counter widget box -->
+       <div class="col-md-3 col-sm-6 col-xs-12" style="width: 400px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-blue"><i class="fa fa-files-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text"><b>Series</b> objects in total</span>
+                <h1><span id="total-series-objects" class="info-box-number">-- --</span></h1>
+                <div class="overlay" id="total-series-objects-loading">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
+            </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+     </div>
+
+     <!-- Instance counter widget box -->
+     <div class="col-md-3 col-sm-6 col-xs-12" style="width: 400px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-files-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text"><b>Instance</b> objects in total</span>
+                <h1><span id="total-instances-objects" class="info-box-number">-- --</span></h1>
+                <div class="overlay" id="total-instances-objects-loading">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
+            </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+     </div>
+
       </div>
       <!-- /.row -->
       <!-- Main row -->
       <div class="row">
           <!-- ImagingStudies widget -->
-          <div class="box box-success">
+          <div class="box box-success" style="margin-left: 50px; width: 1170px;">
             <div class="box-header">
               <i class="fa fa-picture-o"></i>
               <h3 class="box-title">All ImagingStudy objects</h3>
               <div class="box-tools pull-right" data-toggle="tooltip" title="ImagingStudy">
             </div>
-
-            <div class="box-body chat" id="imagingstudy-box"></div>
+          
+          <div class="box-body chat" id="imagingstudy-box"></div>
             <div class="overlay" id="imagingstudy-box-loading">
               <i class="fa fa-refresh fa-spin"></i>
             </div>
