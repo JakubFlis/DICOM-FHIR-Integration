@@ -13,7 +13,13 @@ def argument_error_print():
     print '\033[91m[!] Please specify the configuration file by using -c <path_to_config_file> flag.'
     print '\033[91m[!] Please specify the output file by using -o <path_to_output_file> flag.'
 
+def reload_system_default_encoder():
+    reload(sys)
+    sys.setdefaultencoding("ISO-8859-1")
+
 def main(argv):
+    reload_system_default_encoder()
+
     root_path = ''
     config_path = ''
     output_path = ''

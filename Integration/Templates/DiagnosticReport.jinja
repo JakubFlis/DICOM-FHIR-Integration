@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [ 
+    {% for patient in patients %}
+    {% for study in patient.studies %}
+    {% for series in study.series %}
+    {% for instance in series.instances %}
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "{{ instance.read_property("0x20", "0x0D") }}",
+          "conclusion": "{{ instance.read_report_as_HTML(("0x40", "0xa730"), ("0x08", "0x104")) }}"
+        }
+      }{{ "," if not loop.last }}
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+  ]
+}
