@@ -44,11 +44,11 @@ function refreshAllSeriesCounterWidget(data) {
 function prepareInstancesHTML(series) {
     var instanceHtml = "";
     if (series.instance != undefined && series.instance.length > 0) {
-        instanceHtml += " (Total: " + series.instance.length + ")" + "<ul>";
+        instanceHtml += " (Total: " + series.instance.length + ")" + "<ol>";
         series.instance.forEach(instance => {
-            instanceHtml += "<li>" + instance.sopClass + "</li>";
+            instanceHtml += "<li><img src=\"icon_instance.png\"/> " + instance.sopClass + " no. " + instance.number + "</li>";
         });
-        instanceHtml += "</ul>";
+        instanceHtml += "</ol>";
     }
 
     return instanceHtml;
@@ -57,7 +57,7 @@ function prepareInstancesHTML(series) {
 function prepareSeriesHTML(allSeries) {
     var seriesHtml = "<ul>";
     allSeries.forEach(series => {
-        seriesHtml += "<li>" + series.description;
+        seriesHtml += "<li><img src=\"icon_series.png\"/> " + series.description;
         seriesHtml += prepareInstancesHTML(series);
         seriesHtml += "</li>";
     });
@@ -80,7 +80,7 @@ function refreshImagingStudyListWidget(data) {
         var numberOfSeries = element.resource.series.length;
         var seriesList = prepareSeriesHTML(element.resource.series);
 
-        contentSection += "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#" + id + "\">" + description + "</a><span class=\"pull-right badge bg-blue\">" + numberOfSeries + " series</span></h4></div><div id=\"" + id + "\" class=\"panel-collapse collapse\"><div class=\"panel-body\"><!-- content start -->ID: <i>" + id + "</i><br/>Last updated: <i>" + lastUpdated + "</i><br/><u>Series:</u><br/>" + seriesList + "<!-- content end --></div></div></div>";
+        contentSection += "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#" + id + "\"><img src=\"icon_imagingstudy.png\"/> " + description + "</a><span class=\"pull-right badge bg-blue\">" + numberOfSeries + " series</span></h4></div><div id=\"" + id + "\" class=\"panel-collapse collapse\"><div class=\"panel-body\"><!-- content start -->ID: <i>" + id + "</i><br/>Last updated: <i>" + lastUpdated + "</i><br/><u>Series:</u><br/>" + seriesList + "<!-- content end --></div></div></div>";
     });
 
     jQuery("#imagingstudy-box").html(startSection + contentSection + endSection);
