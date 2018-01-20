@@ -11,15 +11,18 @@ This repository consists of three main folders:
 
 ### Integration
 Python project for processing DICOM files into a designated format specified by a template.
+
 [Integration documentation](Integration/README.md)
 
 ### Server
 Installation guide for the [HAPI-FHIR](https://github.com/jamesagnew/hapi-fhir) backend server.
+
 [Server documentation](Server/README.md)
 
 ### Webapp
 Frontend web application based entirely on [AdminLTE](https://github.com/almasaeed2010/AdminLTE) project template.
-[Integration documentation](Webapp/README.md)
+
+[Webapp documentation](Webapp/README.md)
 
 ### Authors
 
