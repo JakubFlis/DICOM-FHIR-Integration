@@ -1,0 +1,246 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [ 
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.2.1787205428.166.1117461927.35",
+          "conclusion": "<b>Observer Name</b> <b>History of present Illness</b> <p>This 19-year-old black female, nulligravida, was admitted to the hospital on June 14, 1999 with fever of 102°, left lower quadrant pain, vaginal discharge, constipation, and a tender left adnexal mass. Her past history and family history were unremarkable. Present pain had started 2 to 3 weeks prior (starting on May 30, 1999) and lasted for 6 days. She had taken contraceptive pills in the past, but had stopped because she was not sexually active.</p><b>Physical Examination</b> <p>She appeared well-developed and well-nourished, and in mild distress. The only positive physical findings were limited to the abdomen and pelvis. Her abdomen was mildly distended, and it was tender, especially in the lower left quadrant. At pelvic examination her cervix was tender on motion, and the uterus was of normal size, retroverted, and somewhat fixed. There was a tender cystic mass about 4 - 5 cm in the left adnexa. Rectal examination was negative.</p><b>Admitting Diagnosis</b> <p>1. Probable pelvic inflammatory disease (PID).\n2. Rule out ectopic pregnancy.</p><b>Laboratory Data on Admission</b> <p>Hb 8.8, Hct 26.5, WBC 8,100 with 80 segs and 18 lymphs. Sedimentation rate 100 mm in one hour. Sickle cell prep + (turned out to be a trait). Urinalysis normal. Electrolytes normal. SMA-12 normal. Chest x-ray negative, 2 hour UCG negative.</p><b>Hospital Course and Treatment</b> <p>Initially, she was given cephalothin 2 gm IV q6h, and kanamycin 0.5 gm IM b.i.d. Over the next 2 days the patient's condition improved. Her pain decreased, and her temperature came down to normal int he morning and spiked to 101° in the evening. Repeat CBC showed Hb 7.8, Hct 23.5. The pregnancy test was negative. On the second night following the admission, her temperature spiked to 104º. The patient was started on antituberculosis treatment, consisting of isoniazid 300 mg/day, ethambutol 600 mg b.i.d., and rifampin 600 mg daily. She became afebrile on the sixth postoperative day and was discharged on July 15, 1999, in good condition. She will be seen in the office in one week.</p><b>Surgical Procedures</b> <p>Biopsy of omentum for frozen section; culture specimens.</p><b>Discharge Diagnosis</b> <p>Genital tuberculosis.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.840.113654.2.4.4.3.4.119950730134200",
+          "conclusion": "<b>Request</b> <p>Portable chest</p><b>History</b> <p>R/O Pneumothorax s/p chest tube insertion</p><b>Finding</b> <p>Over the interval, there has been placement of a left sided chest tube with significant decrease in the left pleural effusion. There is still a persistent pneumothorax although it likely is smaller as well. The right-sided pneumothorax is slightly bigger.</p><b>Impression</b> <p>Left chest tube insertion with significant decrease in left pleural effusion and pneumothorax.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "2.16.840.1.113662.4.8796818069641.798806497.93296077602350.10",
+          "conclusion": "<b>Request</b> <p>MRI: Knee</p><b>History</b> <p>16 year old with right knee pain after an injury playing basketball.</p><b>Findings</b> <b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.2.1787205428.166.1117461927.32",
+          "conclusion": "<b>Observer Name</b> <b>Chief Complaint</b> <b>Present Illness</b> <b>Past History</b> <b>Family History</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.840.113680.3.103.775.2873347909.282313",
+          "conclusion": "<b>Request</b> <p>Ultrasound: Right lower quadrant</p><b>History</b> <p>Right lower quadrant pain r/o appendicitis</p><b>Findings</b> <b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.4.123456",
+          "conclusion": "<b>Observer Name</b> <b>Observer Organization Name</b> <p>University of Iowa</p><b>Teeth Present</b> <b>Orthodontic/Pediatric Assessment</b> <p>The dental age and chronological age appear to coincide. The occlusal development is within the range of normal, except for the missing teeth noted above.</p><b>Other</b> <p>The borders of the portrayed paranasal sinuses appear to be intact; there is no evidence of pathosis in these sinuses.\nThe airway appears patent, but there is evidence of marked adenoidal hyperplasia.\nPart of the first and second cervical vertebrae are depicted. No gross abnormalities are seen. There is a normal width of prevertebral soft tissue.\nThe generalized bone pattern and jaw morphology are within the range of normal.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.4.123456",
+          "conclusion": "<b>Observer Name</b> <b>Observer Organization Name</b> <p>University of Iowa</p><b>Teeth Present</b> <b>Orthodontic/Pediatric Assessment</b> <p>The dental age and chronological age appear to coincide. The occlusal development is within the range of normal, except for the missing teeth noted above.</p><b>Other</b> <p>The borders of the portrayed paranasal sinuses appear to be intact; there is no evidence of pathosis in these sinuses.\nThe airway appears patent, but there is evidence of marked adenoidal hyperplasia.\nPart of the first and second cervical vertebrae are depicted. No gross abnormalities are seen. There is a normal width of prevertebral soft tissue.\nThe generalized bone pattern and jaw morphology are within the range of normal.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.840.113674.514.212.200",
+          "conclusion": "<b>Request</b> <p>CT: Abdomen</p><b>History</b> <p>Patient is a 45 year old male with abnormal liver function test. Ultrasound evaluation demonstrated a 3 cm lesion in the medial aspect of the right lobe of the liver. The question was raised regarding potential hemangioma.</p><b>Procedure</b> <p>Serial imaging was obtained in the upper abdomen with the administration of oral and intravenous contrast.</p><b>Finding</b> <p>The examination demonstrates a well circumscribed 3 cm lesion present within the medial aspect of the inferior right liver lobe. Initial evaluation demonstrates lack of contrast enhancement. Subsequent imaging (not shown) demonstrated typical contrast enhancement pattern of a benign hemangioma of the liver. The remaining contrast enhancement pattern in the liver is normal. There is normal appearance of the adrenal glands, spleen, kidneys, and pancreas. There is no evidence of liver metastasis. 3 cm nodule present in the inferior medial aspect of right liver lobe. Contrast enhancement pattern consistent with the diagnosis of hemangioma.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.3.12.2.1107.5.8.1.123456789.199507271803030520282",
+          "conclusion": "<b>Request</b> <p>ERCP</p><b>History</b> <p>67 year old male patient, clinical status: two month Jaundice. Query space occupying lesion of the bile duct.</p><b>Findings</b> <b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.2.1787205428.166.1117461927.29",
+          "conclusion": "<b>Findings</b> <b>PA Chest</b> <p>Upright PA view of the chest shows the lung fields are clear, without evidence of an active process. Heart size in normal.</p><b>Impression</b> <p>Negative chest.</p><b>Abdomen</b> <p>Flat and upright views of the abdomen show a normal gas pattern without evidence of obstruction or ileus. There are no calcifications or abnormal masses noted.</p><b>Impression</b> <p>Negative study.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.2.1787205428.166.1117461927.21",
+          "conclusion": "<b>Observer Name</b> <b>Observer Organization Name</b> <p>Redlands Clinic</p><b>Diagnosis</b> <p>Squamous cell carcinoma, relatively superficial, involving the skin of the left external ear, which is seen well on photograph of the left external ear.</p><b>Treatment</b> <p>The plan of treatment is as follows: 4500 rad, 15 treatment sessions, using 100 kV radiation.\nThe reason for treatment, expected acute reaction, and remote possibility of complication was discussed with this patient at some length, and he accepted therapy as outlined.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.3.12.2.1107.5.8.1.123456789.199507271807160007134",
+          "conclusion": "<b>Request</b> <p>MRI Angiography: Renal</p><b>Procedure</b> <p>Puncture of the Right Common femoral artery and advancement of 4F pigtail catheter via a 0.035 inch guide wire into the abdominal aorta at the level of the renal arteries. Three DSA studies with injections of 25 ml Ultravist 300.</p><b>Finding</b> <p>Right Renal artery: Normal location, single vessel supply, high-grade renal artery stenosis approximately 5 mm distal from the origin of the aorta. Left Renal artery: Single vessel supply, significantly larger organ size, no apparent stenosis.</p><b>Recommendation</b> <p>Documented single hemodynamic resultant stenosis of the right renal artery, Angioplasty suggested.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.840.113674.1140.196.200",
+          "conclusion": "<b>Request</b> <p>Rule out internal derangement.</p><b>Procedure</b> <p>Sagittal T1 and T2 weighted images and fast spin echo and coronal T2 weighted images are acquired.</p><b>Finding</b> <p>Within the posterior horn of the medial meniscus there is minimal increase in signal intensity; however, this does not extend to a joint surface and therefore does not represent a tear. The lateral meniscus is normal. The anterior and posterior cruciate ligaments are visualized and are normal. There is a joint diffusion present with a small superior joint plicae. No interarticular loose bodies are identified. There is no focal marrow edema. The collateral ligaments appear normal.</p><b>Opinion</b> <p>Joint diffusion with superior joint plicae. Minimal increased signal within the posterior horn of medial meniscus consistent with intermeniscal degeneration. No evidence of meniscal tear.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.3.12.2.1107.5.8.1.123456789.199507271758050705910",
+          "conclusion": "<b>Request</b> <p>MRI: Pelvis</p><b>Finding</b> <p>Visualization of a cervix carcinoma, almost completely permeating into the anterior and posterior labia and extending into the parametrium on the right side. No indication of bladder or rectal involvement. The pelvic wall is free. The tumor does not extend caudally to the vagina. In the vicinity of the left iliac vessel an approximately 1.5 cm round structure can be seen in today's examination, most probably representing the left ovary. If this has been removed because of the ectopic pregnancy, then it is a pathologically enlarged lymph node. There is an ovarian cyst on the right with individual solid contents. Cervical carcinoma permeating into the anterior and posterior labia and extending into the parametrium on the right side.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.2.1787205428.166.1117461927.21",
+          "conclusion": "<b>Observer Name</b> <b>Observer Organization Name</b> <p>Redlands Clinic</p><b>Description</b> <p>This 78-year-old gentleman referred by Dr. Fukuda was also seen by Dr. Mason at the Redlands Clinic. He has been seen in the past by Dr. Klugman.\nThe patient developed a lesion in the concha of the left external ear. Recent biopsy confirmed this as being a squamous cell carcinoma. The patient has had a few other skin cancers.\nOf most significant past history is the fact that this patient has a leukemia that has been treated in standard fashion by Dr. Klugman. The patient was then transferred to the Redlands Clinic and by some experimental protocol which, I guess, includes some sort of lymphocyte electrophoresis, has been placed into remission. He is not currently on any antileukemia drugs and has responded extremely well to his medical management.\nOn examination, the patient is healthy in general appearance. There is a 1.5 cm lesion on the concha of the ear, which is seen well on photograph of the left external ear. There are numerous soft lymph nodes in both sides of the neck, which I presume are related to his leukemia.</p><b>Diagnosis</b> <p>Squamous cell carcinoma, relatively superficial, involving the skin of the left external ear, which is seen well on photograph of the left external ear.</p><b>Treatment</b> <p>The plan of treatment is as follows: 4500 rad, 15 treatment sessions, using 100 kV radiation.\nThe reason for treatment, expected acute reaction, and remote possibility of complication was discussed with this patient at some length, and he accepted therapy as outlined.</p>"
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.392.200036.9125.0.198811291108.7",
+          "conclusion": "<b>Request</b> <p>Upper GI - double contrast stomach</p><b>History</b> <p>Gastric pain.</p><b>Procedure</b> <p>Double contrast technique of the stomach was performed.</p><b>Findings</b> <b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.840.113663.19950725.1.0",
+          "conclusion": "<b>Request</b> <p>Breast ultrasound</p><b>History</b> <p>Assess palpable mass detected on mammography in the upper outer quadrant of breast in patient with intermittent bloody breast discharge.</p><b>Finding</b> <p>The mass is identified in the upper outer quadrant on the breast corresponding to the size and location of the palpable mass. There are internal echoes indicating that this is a solid mass. Hyperechoic foci are present likely indicating that calcifications are present (confirmed on magnification mammography). In the retroareolar region there was identified an intraductal mass with proximal mild ductal dilatation. This is consistent with an intraductal pappiloma.\n1. Solid breast mass with calcifications.\n2. Intraductal pappiloma.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.4.1915765545.18030.917282194.11",
+          "conclusion": "<b>Image of the Author</b> <b>Liber primus</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "2.16.840.1.113662.2.1.53544936282433.12345.336.16650",
+          "conclusion": "<b>Request</b> <p>CT: Spiral Angiography of the Thorax</p><b>History</b> <p>46-year-old male presented to the emergency room with parasternal and epigastric pain. A chest X-ray showed widening of the mediastinum. R/O thoracic aneurysm</p><b>Finding</b> <p>There is an aneurysm of the entire thoracic aorta measuring up to 6.2 cm in diameter. Also, there is an intimal flap creating two lumens which is evident on all views extending from the aortic base through the ascending aorta, the aortic arch, and the descending aorta including that portion of the abdomen which is on the films. There are no pulmonary masses identified. The emergency room was immediately notified on this finding and a copy of the films were given to the emergency room so that they could accompany the patient.</p><b>Conclusion</b> <p>Aneurysm of thoracic aorta with dissection affecting ascending and descending aorta.</p><b>Best illustration of finding</b> "
+        }
+      },
+    {
+      "request": {
+              "method": "POST"
+      },
+      "resource":
+        {
+          "resourceType": "DiagnosticReport",
+          "status": "registered",
+          "identifier": "1.2.276.0.7230010.3.1.4.123456",
+          "conclusion": "<b>Observer Name</b> <b>Observer Organization Name</b> <p>University of Iowa</p><b>Teeth Present</b> <b>Orthodontic/Pediatric Assessment</b> <p>The dental age and chronological age appear to coincide. The occlusal development is within the range of normal, except for the missing teeth noted above.</p><b>Other</b> <p>The borders of the portrayed paranasal sinuses appear to be intact; there is no evidence of pathosis in these sinuses.\nThe airway appears patent, but there is evidence of marked adenoidal hyperplasia.\nPart of the first and second cervical vertebrae are depicted. No gross abnormalities are seen. There is a normal width of prevertebral soft tissue.\nThe generalized bone pattern and jaw morphology are within the range of normal.</p>"
+        }
+      }
+  ]
+}

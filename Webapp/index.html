@@ -574,7 +574,7 @@
           <div class="box box-success" style="margin-left: 50px; width: 1170px;">
             <div class="box-header">
               <i class="fa fa-picture-o"></i>
-              <h3 class="box-title">All ImagingStudy objects</h3>
+              <h3 class="box-title">All <b>ImagingStudy</b> objects</h3>
               <div class="box-tools pull-right" data-toggle="tooltip" title="ImagingStudy">
             </div>
           
@@ -583,6 +583,8 @@
               <i class="fa fa-refresh fa-spin"></i>
             </div>
           </div>
+
+          
 
           <!-- HIDDEN WIDGETS, TODO: Remove those -->
           <!-- solid sales graph (hidden) -->
@@ -647,6 +649,24 @@
             </div>
           </div>
           <!-- /.nav-tabs-custom -->
+      </div>
+
+      <div class="row">
+        <!-- DiagnosticReport widget -->
+        <div class="box box-success" style="margin-left: 65px; width: 1170px;">
+          <div class="box-header">
+            <i class="fa fa-picture-o"></i>
+            <h3 class="box-title">All <b>DiagnosticReport</b> objects</h3>
+            <div class="box-tools pull-right" data-toggle="tooltip" title="DiagnosticReport">
+          </div>
+        
+        <div class="box-body chat" id="diagnosticreport-box"></div>
+          <div class="overlay" id="diagnosticreport-box-loading">
+            <i class="fa fa-refresh fa-spin"></i>
+          </div>
+        </div>
+
+        
       </div>
       <!-- /.row (main row) -->
 
@@ -896,6 +916,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- DICOM group project imports -->
-<script src="./imagingStudyWidgets.js"></script>
+<script src="./fhirWidgets.js"></script>
 </body>
 </html>
