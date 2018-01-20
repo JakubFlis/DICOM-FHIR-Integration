@@ -15,7 +15,10 @@
           "resourceType": "DiagnosticReport",
           "status": "registered",
           "identifier": "{{ instance.read_property("0x20", "0x0D") }}",
-          "conclusion": "{{ instance.read_report_as_HTML(("0x40", "0xa730"), ("0x08", "0x104")) }}"
+          "conclusion": "{{ instance.read_report_as_HTML(("0x40", "0xa730"), ("0x08", "0x104")) }}",
+          "subject": {
+            "display": "{{ instance.read_property("0x10", "0x10") }}"
+          }
         }
       }{{ "," if not loop.last }}
     {% endfor %}
