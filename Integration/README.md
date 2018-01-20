@@ -87,6 +87,15 @@ Sample template that would print all IDs in new line would be as follows:
 {% endfor %}
 ```
 
+Currently, the Integration engine comes with three templates:
+- template for `ImagingStudy` FHIR objects (integrating DICOM image metadata with FHIR HL7-based servers),
+- template for `DiagnosticReport` FHIR objects (integrating DICOM Structured Reports with FHIR HL7-based servers),
+- template for printing all DICOM ID's - just for presentation purposes (shown above in the exaple).
+
+Available `Instance` functions, that can be used in templates:
+`read_property(coord_x, coord_y)` - reads DICOM property under given TAG coords. `coord_x` and `coord_y` should be passed as a string objects,
+`read_report_as_HTML(report_coords, header_coords):` - reads DICOM SR files (content sequences). `report_coords` and `header_coords` are string tuples (ex. `("0x02", "0xa120")`)
+
 ### Integration with backend server
 
 After a sucessfull conversion from DICOM to designated format, there is a possiblity to send results to a backend server via a REST call. The backend server doesn't have to be a FHIR server - it can be, for example, a CRUD system for a database like PostgreSQL, MySQL etc. It all depends on how the template is built - the result of the integration process is being added to the REST call as a request body. 
