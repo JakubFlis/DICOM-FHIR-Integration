@@ -1,0 +1,419 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [ 
+    {
+    "request": {
+            "method": "POST"
+    },
+    "resource":
+      {
+        "resourceType": "ImagingStudy",
+        "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.199920086920823171706454903251",
+        "accession": "2819497684894126",
+        "modalityList": "",
+        "patient": "0522c0001",
+        "interpreter": "",
+        "procedureReference": "",
+        "description": "Neck^HeadNeckPETCT",
+        "series": [
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.260151978148957514594497217760",
+            "number": "605",
+            "modality": "PT",
+            "description": "PET WB-uncorrected",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19990823",
+                "number": "112",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194236.000000"
+              },
+              {
+                "uid": "19990823",
+                "number": "1",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194231.000000"
+              },
+              {
+                "uid": "19990823",
+                "number": "2",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194231.000000"
+              },
+              {
+                "uid": "19990823",
+                "number": "111",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194236.000000"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.308184765901558710285007064772",
+            "number": "606",
+            "modality": "PT",
+            "description": "PET WB",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19990823",
+                "number": "1",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194237.000000"
+              },
+              {
+                "uid": "19990823",
+                "number": "2",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194237.000000"
+              },
+              {
+                "uid": "19990823",
+                "number": "3",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "194237.000000"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.427264300850965737262860055580",
+            "number": "2",
+            "modality": "CT",
+            "description": "CT 5.0 H30s",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19990823",
+                "number": "16",
+                "sopClass": "CT Image Storage",
+                "title": "193000.458014"
+              },
+              {
+                "uid": "19990823",
+                "number": "17",
+                "sopClass": "CT Image Storage",
+                "title": "193000.907499"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+    "request": {
+            "method": "POST"
+    },
+    "resource":
+      {
+        "resourceType": "ImagingStudy",
+        "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.256809878238026661650178294515",
+        "accession": "2819497684894126",
+        "modalityList": "",
+        "patient": "0522c0001",
+        "interpreter": "",
+        "procedureReference": "",
+        "description": "Neck^HeadNeckPETCT",
+        "series": [
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.224799699720072341908493257751",
+            "number": "606",
+            "modality": "PT",
+            "description": "PET WB",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "40",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133144.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "41",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133144.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "42",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133144.000000"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.293653169363509354643731389289",
+            "number": "2",
+            "modality": "CT",
+            "description": "CT 5.0 H30s",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "59",
+                "sopClass": "CT Image Storage",
+                "title": "131930.114984"
+              },
+              {
+                "uid": "19991207",
+                "number": "60",
+                "sopClass": "CT Image Storage",
+                "title": "131930.566480"
+              },
+              {
+                "uid": "19991207",
+                "number": "61",
+                "sopClass": "CT Image Storage",
+                "title": "131931.023005"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.313834683360850380813202838079",
+            "number": "605",
+            "modality": "PT",
+            "description": "PET WB-uncorrected",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "67",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133139.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "68",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133139.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "69",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "133139.000000"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+    "request": {
+            "method": "POST"
+    },
+    "resource":
+      {
+        "resourceType": "ImagingStudy",
+        "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.264838705771914612556488515740",
+        "accession": "2819497684894126",
+        "modalityList": "",
+        "patient": "0522c0001",
+        "interpreter": "",
+        "procedureReference": "",
+        "description": "Abdomen^AbdomenPETCT",
+        "series": [
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.118643650758016323655506179265",
+            "number": "606",
+            "modality": "PT",
+            "description": "PET WB",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "319",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141401.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "320",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141401.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "321",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141402.000000"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.252282268497495823643342650154",
+            "number": "605",
+            "modality": "PT",
+            "description": "PET WB-uncorrected",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "25",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141320.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "26",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141320.000000"
+              },
+              {
+                "uid": "19991207",
+                "number": "27",
+                "sopClass": "Positron Emission Tomography Image Storage",
+                "title": "141320.000000"
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.14519.5.2.1.5099.8010.279840345131785576013456733353",
+            "number": "2",
+            "modality": "CT",
+            "description": "AbdomenCT 5.0 B40s",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "19991207",
+                "number": "401",
+                "sopClass": "CT Image Storage",
+                "title": "133823.152974"
+              },
+              {
+                "uid": "19991207",
+                "number": "402",
+                "sopClass": "CT Image Storage",
+                "title": "133823.343478"
+              },
+              {
+                "uid": "19991207",
+                "number": "403",
+                "sopClass": "CT Image Storage",
+                "title": "133823.534988"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+    "request": {
+            "method": "POST"
+    },
+    "resource":
+      {
+        "resourceType": "ImagingStudy",
+        "uid": "1.3.6.1.4.1.22213.2.26555",
+        "accession": "",
+        "modalityList": "",
+        "patient": "0522c0001",
+        "interpreter": "",
+        "procedureReference": "",
+        "description": "",
+        "series": [
+          {
+            "uid": "1.3.6.1.4.1.22213.2.26555.2",
+            "number": "1",
+            "modality": "CT",
+            "description": "CTs from rtog conversion",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "",
+                "number": "95",
+                "sopClass": "CT Image Storage",
+                "title": ""
+              },
+              {
+                "uid": "",
+                "number": "96",
+                "sopClass": "CT Image Storage",
+                "title": ""
+              },
+              {
+                "uid": "",
+                "number": "97",
+                "sopClass": "CT Image Storage",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.22213.2.26555.3",
+            "number": "2",
+            "modality": "RTSTRUCT",
+            "description": "RTStruct from rtog conversion",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "",
+                "number": "",
+                "sopClass": "RT Structure Set Storage",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.22213.2.26555.4.1",
+            "number": "3",
+            "modality": "RTPLAN",
+            "description": "RT Plan (excerpt) - fx1hetero",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "",
+                "number": "",
+                "sopClass": "RT Plan Storage",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "uid": "1.3.6.1.4.1.22213.2.26555.5.1",
+            "number": "4",
+            "modality": "RTDOSE",
+            "description": "RT Dose - fx1hetero",
+            "bodySite": "HEADNECK",
+            "laterality": "",
+            "performer": "",
+            "instance": [
+              {
+                "uid": "",
+                "number": "",
+                "sopClass": "RT Dose Storage",
+                "title": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
